@@ -13,9 +13,10 @@ DEFAULT_NETWORK_INTERFACE=$(ip route | grep '^default' | awk '{print $5}' | head
 
 ## Load bar on primary monitor
 polybar -c ~/.config/polybar/config.ini main &
+polybar -c ~/.config/polybar/config.ini secondary &
 
 # Load on second monitor if connected
-external_monitor=$(xrandr | grep "DP-2 " | awk '{ print$2 }')
-if [[ $external_monitor = "connected" ]]; then
-	polybar -c ~/.config/polybar/config.ini secondary &
-fi
+#external_monitor=$(xrandr | grep "DP-2 " | awk '{ print$2 }')
+#if [[ $external_monitor = "connected" ]]; then
+#	polybar -c ~/.config/polybar/config.ini secondary &
+#fi

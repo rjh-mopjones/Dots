@@ -32,6 +32,7 @@ feh --bg-fill /home/rjh-mopjones/Downloads/space.png
 bspc config active_border_color "#ff0000"
 bspc config focused_border_color "#eaeaea"
 panel &
+spotify-listener &
 xsetroot -cursor_name left_ptr &
 bash ~/.config/polybar/launch.sh &
 picom
